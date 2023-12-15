@@ -7,10 +7,26 @@ import TextAreaFunction from "./components/TextAreaFunction";
 import TextAreaClass from "./components/TextAreaClass";
 import SelectFunction from "./components/SelectFunction";
 import SelectClass from "./components/SelectClass";
+import RadioGroupFunction from "./components/RadioGroupFunction";
+import RadioGroupClass from "./components/RadioGroupClass";
+import CheckBoxGroupFunction from "./components/CheckBoxGroupFunction";
+import CheckBoxGroupClass from "./components/CheckBoxGroupClass";
 
 function App() {
   const [count, setCount] = useState(0);
+  var radios = [
+    { value: 1, text: "radio1" },
+    { value: 2, text: "radio2" },
+    { value: 3, text: "radio3", checked: true },
+    { value: 4, text: "radio4" },
+  ];
 
+  var checkboxes = [
+    { value: 1, text: "check1" },
+    { value: 2, text: "check2", checked: true },
+    { value: 3, text: "check3", checked: true },
+    { value: 4, text: "check4" },
+  ];
   return (
     <>
       <h4>Formulaire simple</h4>
@@ -44,6 +60,18 @@ function App() {
         defaultValue={4}
         options={["Option 1", "Option 2", "Option 3", "Option 4"]}
       />
+      <hr />
+      <h4>Les boutons radio (Fonctionnel)</h4>
+      <RadioGroupFunction radios={radios} />
+      <hr />
+      <h4>Les boutons radio (Class)</h4>
+      <RadioGroupClass radios={radios} />
+      <hr />
+      <h4>Les cases à cocher (Fonctionnel)</h4>
+      <CheckBoxGroupFunction checkboxes={checkboxes} />
+      <hr />
+      <h4>Les cases à cocher (Class)</h4>
+      <CheckBoxGroupClass checkboxes={checkboxes} />
       <hr />
     </>
   );
