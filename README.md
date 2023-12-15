@@ -1,8 +1,6 @@
-# React + Vite
+# C12 : Développer en Front-end
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## S10 : Créer des formulaires
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+En HTML, les éléments de formulaire tels que <input>, <textarea>, et <select> maintiennent généralement leur propre état et se mettent à jour par rapport aux saisies de l’utilisateur. En React, l’état modifiable est généralement stocké dans la propriété state des composants et mis à jour uniquement avec setState().
+On peut combiner ces deux concepts en utilisant l’état local React comme « source unique de vérité ». Ainsi le composant React qui affiche le formulaire contrôle aussi son comportement par rapport aux saisies de l’utilisateur. Un champ de formulaire dont l’état est contrôlé de cette façon par React est appelé un « composant contrôlé ».
